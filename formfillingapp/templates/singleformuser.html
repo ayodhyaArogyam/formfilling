@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single user Data From Filling</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+
+    {% comment %} {% for u in user %} {% endcomment %}
+    
+    <div class="bg-white rounded-lg p-6 shadow-xl flex flex-col   p-2">
+
+        <table class="border-collapse border border-slate-500 ...">
+            <thead class="bg-red-700">
+              <tr>
+                <th class="border border-slate-600 bg-white rounded-lg p-6 shadow-xl">Entity</th>
+                <th class="border border-slate-600 bg-white rounded-lg p-6 shadow-xl">Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">First Name</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.first_name}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Last Name</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.last_name}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Who Invited</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.who_invited}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Visited Date</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.date_visit}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Hear About</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.hear_about}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Company Name</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.company_name}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Industry</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.Your_industry}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Professional classification</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.professional_classifiction}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Address 1</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.Address1}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Address 2</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.Address2}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">City</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.city}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">State</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.state}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Postal</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.postal}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Email</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.email}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Website</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.website}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Number -1</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.number1}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">number -2</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.number2}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">GST NO.</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.gst}}</td>
+              </tr><tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Experiance</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.experience}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Educational Background</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.edu_background}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">License is revoked</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.revoke_license}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Primary Occupation</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.primary_occupation}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Commitment to come</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.commitment}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Qulified Substitute</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.qualified_substitue}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Bring Referral</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.bring_referral}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Quantity Referral</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.quantity_referral}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Is Bk Member</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.bkmember}}</td>
+              </tr>
+              <tr>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">Related to Other Organisation</td>
+                <td class="border border-slate-700 bg-white rounded-lg p-3 shadow-xl">{{u.otherOrg}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+    </div>
+    
+    {% comment %} {% endfor %} {% endcomment %}
+
+    
+</body>
+</html>

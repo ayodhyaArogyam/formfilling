@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bk Arogyam Stage 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <div class="flex h-screen my-auto flex-col">
+        <div class="flex flex-col mx-auto w-[70vw]">
+            <form action="" method="post">
+
+                {% csrf_token %}
+
+            
+
+            <h1 class="text-red-400 text-7xl mx-auto ml-0 my-5  font-bold">
+                Bk.Arogyam
+            </h1>
+            <p class="flex p-1  text-3xl font-bold">
+                Bk Arogyam - Appllication Form
+            </p>
+                <div class="flex p-1 mb-5 text-sm">
+                    Bk Arogyam Membership Application Form
+                </div>
+
+            <div class="flex  flex-col p-1">
+
+                <div class="flex justify-between my-5">
+                    <div class="flex flex-col">
+                        <h3 class="font-bold">Chapter</h3>
+                        <div>
+                            Bk Arogyam  
+                        </div>
+
+                    </div>
+                    <div class="flex">
+                        <div class="flex flex-col">
+                            <h3 class="font-bold">Region</h3>
+                            <div>
+                                Bk Arogyam Varanasi
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- one section end -->
+                <div class="grid grid-flow-col grid-col-3 gap-1">
+                    <div class="flex flex-col ">
+                        <h2 class="font-bold">Who Invited you to this Chapter? <span class="text-red-500">*</span></h2>
+                        <input class="border rounded p-1" type="text"  name="Who_invited" id="" placeholder="who invited">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="font-bold">Date of Chapter Visit <span class="text-red-500">*</span></h2>
+                        <input class="border rounded p-1" type="date"  name="date_visit" id="">
+                    </div>
+                    <div class="flex flex-col ">
+                        <h2 class="font-bold">How did you first hear about Bk Arogyam? <span class="text-red-500">*</span></h2>
+                        <select class="p-1 rounded border" name="hear_about" id="">
+                            <option value="freind">Friend or Family Member</option>
+                            <option value="Bussiness Associate">Bussiness Associate</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Newspaper or Magazine">Newspaper or Magazine</option>
+                            <option value="Online Search ">Online Search</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class=" flex flex-col my-5">
+                    <div class="font-bold text-xl">
+                        ABOUT YOU
+                    </div>
+                    <div class="text-xs my-1">
+                        Please fill exactly as in the Expression of Interest Form
+                    </div>
+
+                    <div class="grid grid-flow-col grid-cols-3 gap-0 justify-items-start gap-1">
+                        <div class="flex flex-col w-full ">
+                            <h2 class="font-bold">First and Last Name<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="text"  name="first_name" id="" placeholder="first name">
+                        </div>
+                        <div class="flex flex-col w-full ">
+                            <h2 class="font-bold">_<span class="text-red-500"></span></h2>
+                            <input class="border rounded p-1 w-full" type="text"  name="last_name" id="" placeholder="last name">
+                        </div>
+                        <div class="flex flex-col w-full">
+                            <h2 class="font-bold flex">Company Name<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1 w-full" type="text"  name="company_name" id="" placeholder="company name">
+                        </div>
+                    </div>
+
+
+                    <div class="grid grid-flow-col gap-1 my-4">
+                        <div class="flex flex-col w-full ">
+                            <h2 class="font-bold">What is your Industry?<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="text"  name="Your_industry" id="" placeholder="your industry">
+                        </div>
+                        <div class="flex flex-col w-full ">
+                            <h2 class="font-bold">What is your Professional Classification?<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="text"  name="professional_classifiction" id="" placeholder="professional classification">
+                        </div>
+
+                    </div>
+
+                    <div class="grid  grid-cols-3 gap-1 my-4">
+                        <div class="flex flex-col w-full col-span-3 ">
+                            <h2 class="font-bold">Bussiness Address<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="text"  name="Address1" id="" placeholder="Address Line 1" >
+                        </div>
+                        <div class="flex flex-col w-full col-span-3">
+                            <!-- <h2 class="font-bold">What is your Professional Classification?<span class="text-red-500">*</span></h2> -->
+                            <input class="border rounded p-1" type="text"  name="Address2" id="" placeholder="Address Line 2">
+                        </div>
+                        <div class="flex flex-col w-full col-span-1">
+                            <!-- <h2 class="font-bold">What is your Professional Classification?<span class="text-red-500">*</span></h2> -->
+                            <input class="border rounded p-1" type="text"  name="city" id="" placeholder="City">
+                        </div>
+                        <div class="flex flex-col w-full col-span-1">
+                            <!-- <h2 class="font-bold">What is your Professional Classification?<span class="text-red-500">*</span></h2> -->
+                            <input class="border rounded p-1" type="text"  name="state" id="" placeholder="State/Province/Region">
+                        </div>
+                        <div class="flex flex-col w-full col-span-1">
+                            <!-- <h2 class="font-bold">What is your Professional Classification?<span class="text-red-500">*</span></h2> -->
+                            <input class="border rounded p-1" type="text"  name="postal" id="" placeholder="Postal/Zip Code">
+                        </div>
+
+                    </div>
+
+                    <div class="grid grid-cols-2 my-4 gap-2">
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Email<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="email"  name="email" id="" placeholder="Postal/Zip Code">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Bussiness Website<span class="text-red-500"></span></h2>
+                            <input class="border rounded p-1" type="text"  name="website" id="" placeholder="Website url">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Mobile Number<span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="number"  name="number1" id="" placeholder="Number">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Secondry Phone Number<span class="text-red-500"></span></h2>
+                            <input class="border rounded p-1" type="number"  name="number2" id="" placeholder="Alternate number">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">GST Number<span class="text-red-500"></span></h2>
+                            <input class="border rounded p-1" type="text"  name="gst" id="" placeholder="GST no.">
+                        </div>
+
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-2xl">EXPERIENCE & CREDENTIALS</h2>
+                        <div class="grid grid-cols-3 gap-1">
+
+                        </div>
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Share the experience you possess in your professional classification (please be specific): <span class="text-red-500">*</span></h2>
+                            <!-- <input class="border rounded p-1" type="text"  name="gst" id="" placeholder="GST no."> -->
+                            <textarea class="border rouded p-1 " name="experience" id="" cols="30" rows="3" placeholder="tells about experiance"></textarea>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Length of time you've spent in your professional classification: <span class="text-red-500">*</span></h2>
+                            <input class="border rounded p-1" type="text"  name="time_spend" id="" placeholder="how much time spend">
+                            <!-- <textarea class="border rouded p-1 " name="experience" id="" cols="30" rows="3"></textarea> -->
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold">Educational background, training, certifications in professional classification or degree:  <span class="text-red-500">*</span></h2>
+                            <!-- <input class="border rounded p-1" type="text"  name="gst" id="" placeholder="GST no."> -->
+                            <textarea class="border rouded p-1 " name="edu_background" id="" cols="30" rows="3" placeholder="educational background"></textarea>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Has your professional license ever been revoked or suspended?  <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1">
+                                <input type="radio" name="revoke_license" id="" value="0">
+                                <p class="text-sm"> NO, my professional license has never been revoked or suspended</p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="revoke_license" id="" value="1">
+                                <p class="text-sm"> Yes</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Is your primary occupation the professional industry/​classification you entered above?  <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="primary_occupation" id="" value="1">
+                                <p class="text-sm"> YES, it is my full-time occupation </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="primary_occupation" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+
+                    <!-- another section standard and expections -->
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-2xl my-2" >STANDARDS & EXPECTATIONS </h2>
+                        
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Are you willing and able to make the commitment to arrive at our weekly meetings on time, stay throughout the 90 minutes, attend the Member Success Program training, and do you agree to abide by Bk Arogyam Member Policies, Guidelines, and Code of Ethics? <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="commitment" id="" value="1">
+                                <p class="text-sm">  YES, I am willing/​able to make this commitment </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="commitment" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Are you willing to find and send a qualified substitute if you are unable to attend a meeting?  <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="qualified_substitue" id="" value="1">
+                                <p class="text-sm">  YES, I am willing/​able to make this commitment </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="qualified_substitue" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Are you willing/​able to bring referrals and/​or visitors to this chapter? <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="bring_referral" id="" value="1">
+                                <p class="text-sm">  YES, I am willing/​able to make this commitment </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="bring_referral" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Please rate your ability to provide quality Referrals and Visitors to the chapter<span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="0">
+                                <p class="text-sm">  0(minimal) </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="1">
+                                <p class="text-sm">  1 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="2">
+                                <p class="text-sm">  2 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="3">
+                                <p class="text-sm">  3 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="4">
+                                <p class="text-sm">  4 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="5">
+                                <p class="text-sm">  5 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="6">
+                                <p class="text-sm">  6 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="7">
+                                <p class="text-sm">  7 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="8">
+                                <p class="text-sm">  8 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="9">
+                                <p class="text-sm">  9 </p>
+                                </div>
+                                <div class="mx-1 flex gap-1">
+                                    <input type="radio" name="quantity_referral" id="" value="10">
+                                <p class="text-sm">  10(Excellent) </p>
+                                </div>
+                            </div>
+                            <!-- <div class="flex gap-1 my-2">
+                                <input type="radio" name="bring_referral" id="" value="false">
+                                <p class="text-sm"> No</p>
+                            </div> -->
+                            
+                        </div>
+                        <!-- end this section -->
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Have you or your company ever been a member of a Bk Arogyam ? <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="bkmember" id="" value="1">
+                                <p class="text-sm">  YES, I have/​My company has been a Bk Arogyam Member before  </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="bkmember" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 my-2">
+                            <h2 class="font-bold my-2">Do you belong to any other networking organizations? <span class="text-red-500">*</span></h2>
+                            <div class="flex gap-1 ">
+                                <input type="radio" name="otherOrg" id="" value="1">
+                                <p class="text-sm">   YES, I belong to other networking organizations  </p>
+                            </div>
+                            <div class="flex gap-1 my-2">
+                                <input type="radio" name="otherOrg" id="" value="0">
+                                <p class="text-sm"> No</p>
+                            </div>
+                            
+                        </div>
+                        <!-- end section  -->
+
+
+                    </div>
+
+                    <!-- bussiness reference -->
+                    <div class="flex flex-col">
+
+                        <h2 class="font-bold text-2xl my-1">BUSINESS REFERENCES </h2>
+                        <p class="text-sm my-1 italic">Business references are people who have experience with your business: customers, referral partners, vendors, etc.</p>
+                        <p class="text-sm my-1">This information will be used only for contacting references, not for any promotional purposes</p>
+
+                        <div class="grid grid-cols-3 gap-1">
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #1 - First & Last Name<span class="text-red-500">*</span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_first_name" id="" placeholder="Ref First Name">
+                            </div>
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">_<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_last_name" id="" placeholder="Ref Last Name">
+                            </div>
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #1 - Business Name<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_bussiness_name" id="" placeholder="Ref bussiness name">
+                            </div>
+                            
+                        </div>
+
+                        <div class="grid grid-flow-col gap-1">
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #1 - Phone<span class="text-red-500">*</span></h2>
+                                <input class="border rounded p-1" type="number"  name="ref_phone" id="" placeholder="Ref Phone number">
+                            </div>
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #1 - Email<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_email" id="" placeholder="Ref Email">
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="grid grid-flow-col gap-1">
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #1 - Your Business Relationship<span class="text-red-500">*</span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_business_rel1" id="" placeholder="Ref Phone number">
+                            </div>
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #2 - Your Business Relationship<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_business_rel2" id="" placeholder="Ref Business relation">
+                            </div>
+
+                            
+
+                        </div>
+                        <!-- section#2 -->
+
+                        <div class="grid grid-cols-3 gap-1">
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #2 - First & Last Name<span class="text-red-500">*</span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_firs_name2" id="" placeholder="Ref First Name">
+                            </div>
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">_<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_last_name2" id="" placeholder="Ref Last Name">
+                            </div>
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #2 - Business Name<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_bussiness_name2" id="" placeholder="Ref bussiness name2">
+                            </div>
+                            
+                        </div>
+
+                        <div class="grid grid-flow-col gap-1">
+
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #2 - Phone<span class="text-red-500">*</span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_phone2" id="" placeholder="Ref Phone number2">
+                            </div>
+                            <div class="flex flex-col w-full col-span-1 my-2">
+                                <h2 class="font-bold">Reference #2 - Email<span class="text-red-500"></span></h2>
+                                <input class="border rounded p-1" type="text"  name="ref_email2" id="" placeholder="Ref Email 2">
+                            </div>
+
+                            
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="py-2">
+
+                    <h2 class="font-bold my-2">Contact Information <span class="text-red-700">*</span></h2>
+
+                    <div class="flex gap-1">
+                        <input type="checkbox" name="confirm" id="">
+                        <p class="text-sm"> I have/​will inform the above contacts that I am sharing their information with Bk Arogyam for the purpose of references </p>
+
+                    </div>
+
+                    <h2 class="font-bold my-2">Terms and Certifications<span class="text-red-700">*</span></h2>
+
+                    <p class="text-sm">
+                        By submitting this Application, you agree to receive communication from or relating to Bkarogyam, and further agree that Bkarogyam may share your information and any other information and material you provide with other Bkarogyam members, affiliates, vendors. and third parties in order to provide you services as a Bkarogyam member. See Bkarogyam.com's Privacy policy for more information. Please visit Bkarogyam 
+                    </p>
+                    <p class="my-4 text-sm">
+                        <b>
+                            Arbitration:
+                        </b>
+                         All disputes arising out of/ related, to this Agreement or the member's participation in Bkarogyam shall be resolved by binding arbitration by a panel of three arbitrators, wherein each party shall appoint one arbitrator and the two arbitrators so appointed shall appoint the third arbitrator, in accordance with the laws of India. The Arbitration proceedings shall be conducted in Bangalore and shall be as per the provisions of the Arbitration and conciliation Act 1996 (as amended). The language of Arbitration shall be English and the cost of arbitration shall be borne by the Party against whom an award is passed. The arbitration award made shall be final and binding on the Parties and the Parties agree to be bound thereby and to act accordingly. The clause encompasses any and all disputes involving Bkarogyam, its franchisee, and their officers, directors, agents and representatives,
+                         as well as members, provided that the dispute pertain to the membership or participation in Bkarogyam. The Agreement shall be governed by and construed in accordance with the laws of the Republic of India. In any case, for supervisory, injunctive relief or relief of specific performance, this Agreement and any dispute arising out of this Agreement shall be subject to jurisdiction of courts in the city of Bangalore, Republic of India.
+                    </p>
+
+                    <p class="my-4 text-sm">
+                        <b>Acknowledgement:</b>
+                         I fully understand that membership of Bkarogyam is purely voluntary and does not imply nor is it a partnership between the member and Bkarogyam of any nature and therefore Bkarogyam is not committed to nor responsible in any manner for any projects that I undertake, or any transaction consummated between myself and other fellow Bkarogyam members regardless of whether such project or transaction has directly or indirectly resulted from a referral received during my membership. I further agree that Bkarogyam in any manner does not guarantee any results from such membership and in no event can Bkarogyam be held responsible if I do not achieve the purpose behind becoming a Bkarogyam member.
+                    </p>
+
+                    <p class="my-4 text-sm">
+                        <b>Term:</b>
+                         All term fees are measured from the application date. Applications dated between 1st and the 15th of the month shall begin their term on the 1st of that month. Applications dated after the 15th of the month shall begin their term on the 1st of the following month. Terms run for one (1) year from the date the term begins.
+
+                    </p>
+
+                    <p class="my-4 text-sm">
+                        <b>Certification:</b>
+                         I hereby declare and certify that all statements contained in this application and any accompanying documents are true and correct, and that any misrepresentation or false statement may be grounds for rejecting my application or, if discovered after my application has been accepted, subject me to immediate termination at franchisee's or Bkarogyam's discretion without any reimbursement. I further understand that my membership is conditional and I agree, accept and will abide by all the terms and conditions set forth herein and those contained within the Bkarogyam Member Policies, Guidelines and Code of Ethics, all of which I have had the opportunity to review on
+
+                    </p>
+                    <p class="text-sm font-bold">
+                        I understand and agree that upon my acceptance to Bkarogyam, fees are non-refundable without exception.
+                    </p>
+
+                    <p>
+                        <div class="font-bold text-base">Agreement</div>
+                        <div class="flex gap-1 my-2">
+                            <input type="checkbox" name="agree" id="">
+                            <p class="text-sm"> I Agree to the Terms and Conditions & Privacy Policy </p>
+                        </div>
+                    </p>
+
+                    {% if message %}
+                    {{message}}
+                    {% endif %}
+
+                    
+                </div>
+
+                <div class="flex gap-2">
+                    {% comment %} <a href="{% url 'stage1' %}">
+                    <button class="p-2 border border-red-700 rounded transition-transform hover:scale-x-105"   >
+                       < Back
+                    </button>
+                </a> {% endcomment %}
+                    <button class="p-2 text-white rounded bg-red-700 transition-transform hover:scale-x-105" id='myForm' type="submit">
+                        Submit
+                    </button>
+                </div>
+                
+                <!-- <div class="flex p-1 ">
+                    <input type="radio" name="member" id="" value="true">
+                    <div class="px-2"> Member Application</div>
+                </div>
+                <div class="flex p-1">
+                    <input type="radio" name="member" id="" value="false">
+                    <div class="px-2"> Renewal Application </div>
+                </div> -->
+
+                <!-- {% if active %}
+                
+                <div class="text-white bg-red-600 text-sm p-1">
+                    Are you applying as a new member or existing member for renewal? is required.
+                </div>
+                {% endif %} -->
+
+
+
+
+
+            </div   >
+
+            <!-- <button class="font-bold bg-red-800 text-white ml-0 flex mx-auto mt-5 p-2 rounded m-1 transition-transform hover:scale-x-105">
+                Next >
+
+            </button> -->
+        </form>
+        </div>
+
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            // Your form submission logic here
+        });
+        </script>
+    
+</body>
+</html>
